@@ -1,3 +1,10 @@
+const mongoose = require('mongoose');
+const dotenv = require("dotenv").config()
+const Joi = require('joi')
+const { validateEntries } = require('../middleware/validate');
+const port = process.env.DATABASE_ACCESS
+
+
 const getContact = (req,res) => {
     res.status(200).json({ message : "Get All Contacts"})
 }
